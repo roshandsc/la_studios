@@ -141,30 +141,11 @@ body {
 
 /* Rotating Quote Text (Moved Under Logo) */
 .carousel {
-  margin-top: 12px;
+  margin-top: 10px;
   font-family: "Cinzel", serif;
-  font-size: 1.5rem;
-  opacity: 0;
-  animation: fadeText 4s infinite;
-}
-
-@keyframes fadeText {
-  0% {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  20% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  80% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
+  font-size: 1.3rem;
+  opacity: 0.8;
+  text-align: center;
 }
 
 /* Logo (Reduced Size & centered) */
@@ -189,8 +170,10 @@ body {
   font-size: 1.6rem;
   opacity: 0.95;
   font-family: "Cinzel", serif;
-  margin-left: 4px;
   letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-top: 6px;
 }
 
 .tagline {

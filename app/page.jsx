@@ -107,7 +107,9 @@ export default function Home() {
                   <span className="emoji">📍</span>
                   <h3>Address</h3>
                 </div>
-                <p>Bengaluru, India</p>
+                <p>
+                  02 OTC Cross Road,Bengaluru Urban 29-KARNATAKA-560053 India
+                </p>
               </div>
 
               <div className="contact-card hover-animate">
