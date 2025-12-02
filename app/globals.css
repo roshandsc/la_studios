@@ -171,7 +171,8 @@ body {
   opacity: 0.95;
   font-family: "Cinzel", serif;
   letter-spacing: 2px;
-  text-align: center;
+  text-align: left;
+  padding-left: 50px;
   width: 100%;
   margin-top: 6px;
 }
