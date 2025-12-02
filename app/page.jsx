@@ -79,36 +79,52 @@ export default function Home() {
     <div className="container">
       <div className="desktop-layout">
         <div className="left-block">
-          <div className="logo-wrapper">
-            <Image
-              src="/logo.png"
-              alt="La Capella Studios Logo"
-              width={260}
-              height={260}
-              className="logo"
-            />
+          <div className="left-wrapper fade-card">
+            <div className="logo-wrapper">
+              <Image
+                src="/logo.png"
+                alt="La Capella Studios Logo"
+                width={260}
+                height={260}
+                className="logo"
+              />
+            </div>
+            <h2 className="coming-soon">COMING SOON</h2>
+            <div className={`carousel ${fade ? "fade-in" : "fade-out"}`}>
+              {messages[index]}
+            </div>
+            <p className="tagline">A new cinematic era begins...</p>
           </div>
-          <h2 className="coming-soon">COMING SOON</h2>
-          <div className={`carousel ${fade ? "fade-in" : "fade-out"}`}>
-            {messages[index]}
-          </div>
-          <p className="tagline">A new cinematic era begins...</p>
         </div>
 
         <div className="right-block">
-          <h2 className="contact-title">Contact Us</h2>
-          <div className="contact-section">
-            <div className="contact-card">
-              <h3>📍 Address</h3>
-              <p>Bengaluru, India</p>
-            </div>
-            <div className="contact-card">
-              <h3>📧 Email</h3>
-              <p>lacapellastudios@gmail.com</p>
-            </div>
-            <div className="contact-card">
-              <h3>📞 Phone</h3>
-              <p>+91 95356 77831</p>
+          <div className="contact-wrapper fade-card">
+            <h2 className="contact-title">Contact Us</h2>
+
+            <div className="contact-section">
+              <div className="contact-card hover-animate">
+                <div className="card-left">
+                  <span className="emoji">📍</span>
+                  <h3>Address</h3>
+                </div>
+                <p>Bengaluru, India</p>
+              </div>
+
+              <div className="contact-card hover-animate">
+                <div className="card-left">
+                  <span className="emoji">📧</span>
+                  <h3>Email</h3>
+                </div>
+                <p>lacapellastudios@gmail.com</p>
+              </div>
+
+              <div className="contact-card hover-animate">
+                <div className="card-left">
+                  <span className="emoji">📞</span>
+                  <h3>Phone</h3>
+                </div>
+                <p>+91 95356 77831</p>
+              </div>
             </div>
           </div>
         </div>
