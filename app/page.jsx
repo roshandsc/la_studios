@@ -100,13 +100,9 @@ export default function Home() {
                   <h3>Address</h3>
                 </div>
                 <p>
-                  02 OTC Cross Road,
+                  02 OTC Cross Road, Bengaluru Urban,
                   <br />
-                  Bengaluru Urban,
-                  <br />
-                  Karnataka - 560053,
-                  <br />
-                  India
+                  Karnataka - 560053, India
                 </p>
               </div>
 
