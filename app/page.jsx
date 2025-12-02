@@ -2,14 +2,14 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function Home() {
-  const messages = [
-    "CINEMA IS THE LANGUAGE OF DREAMS",
-    "STORIES THAT LAST FOREVER",
-    "EMOTIONS ARE OUR CANVAS",
-    "WHERE VISIONS COME ALIVE",
-  ];
+const messages = [
+  "CINEMA IS THE LANGUAGE OF DREAMS",
+  "STORIES THAT LAST FOREVER",
+  "EMOTIONS ARE OUR CANVAS",
+  "WHERE VISIONS COME ALIVE",
+];
 
+export default function Home() {
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
   const [status, setStatus] = useState("idle");
@@ -34,6 +34,14 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Auto-hide form status messages after 3 seconds
+  useEffect(() => {
+    if (status === "success" || status === "error") {
+      const timer = setTimeout(() => setStatus("idle"), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -95,14 +103,16 @@ export default function Home() {
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea rows="4" name="message" placeholder="Message"></textarea>
-        <button type="submit">Notify Me</button>
+        <button type="submit" disabled={status === "loading"}>
+          {status === "loading" ? "Sending..." : "Notify Me"}
+        </button>
         {status === "success" && (
-          <p className="form-status">
-            Thank you, we’ll get back to you shortly.
-          </p>
+          <p className="form-status success">✔ Message sent successfully!</p>
         )}
         {status === "error" && (
-          <p className="form-status">Something went wrong. Please try again.</p>
+          <p className="form-status error">
+            ⚠ Something went wrong — try again.
+          </p>
         )}
       </form>
 

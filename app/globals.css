@@ -165,3 +165,70 @@ footer {
   opacity: 0 !important;
   transition: opacity 0.6s ease-in-out;
 }
+
+/* ---------------- Mobile Responsive Tweaks ---------------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .logo-wrapper img,
+  .logo {
+    width: 180px;
+  }
+
+  .carousel {
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 8px;
+  }
+
+  .studio-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+
+  .coming-soon {
+    font-size: 1.2rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+    opacity: 0.6;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-top: 14px;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 4px;
+    gap: 10px;
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 14px;
+  }
+
+  footer {
+    font-size: 0.75rem;
+    bottom: 10px;
+  }
+}
