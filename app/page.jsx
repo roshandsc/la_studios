@@ -77,44 +77,42 @@ export default function Home() {
 
   return (
     <div className="container">
-      {/* Logo */}
-      <div className="logo-wrapper">
-        <Image
-          src="/logo.png"
-          alt="La Capella Studios Logo"
-          width={260}
-          height={260}
-          className="logo"
-        />
+      <div className="desktop-layout">
+        <div className="left-block">
+          <div className="logo-wrapper">
+            <Image
+              src="/logo.png"
+              alt="La Capella Studios Logo"
+              width={260}
+              height={260}
+              className="logo"
+            />
+          </div>
+          <h2 className="coming-soon">COMING SOON</h2>
+          <div className={`carousel ${fade ? "fade-in" : "fade-out"}`}>
+            {messages[index]}
+          </div>
+          <p className="tagline">A new cinematic era begins...</p>
+        </div>
+
+        <div className="right-block">
+          <h2 className="contact-title">Contact Us</h2>
+          <div className="contact-section">
+            <div className="contact-card">
+              <h3>📍 Address</h3>
+              <p>Bengaluru, India</p>
+            </div>
+            <div className="contact-card">
+              <h3>📧 Email</h3>
+              <p>lacapellastudios@gmail.com</p>
+            </div>
+            <div className="contact-card">
+              <h3>📞 Phone</h3>
+              <p>+91 95356 77831</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* Text */}
-      <h2 className="coming-soon">COMING SOON</h2>
-
-      {/* Animated Message */}
-      <div className={`carousel ${fade ? "fade-in" : "fade-out"}`}>
-        {messages[index]}
-      </div>
-
-      <p className="tagline">A new cinematic era begins...</p>
-
-      {/* Contact Form */}
-      <form className="form" onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea rows="4" name="message" placeholder="Message"></textarea>
-        <button type="submit" disabled={status === "loading"}>
-          {status === "loading" ? "Sending..." : "Notify Me"}
-        </button>
-        {status === "success" && (
-          <p className="form-status success">✔ Message sent successfully!</p>
-        )}
-        {status === "error" && (
-          <p className="form-status error">
-            ⚠ Something went wrong — try again.
-          </p>
-        )}
-      </form>
 
       <footer>© 2025 La Capella Studios. All Rights Reserved.</footer>
     </div>
