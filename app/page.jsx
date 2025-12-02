@@ -15,22 +15,14 @@ export default function Home() {
   const [status, setStatus] = useState("idle");
 
   useEffect(() => {
-    let current = 0;
-
     const interval = setInterval(() => {
       setFade(false);
 
       setTimeout(() => {
-        current++;
-
-        if (current < messages.length) {
-          setIndex(current);
-          setFade(true);
-        } else {
-          clearInterval(interval);
-        }
-      }, 400);
-    }, 4000);
+        setIndex((prev) => (prev + 1) % messages.length);
+        setFade(true);
+      }, 500);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -90,7 +82,7 @@ export default function Home() {
               />
             </div>
             <h2 className="coming-soon">COMING SOON</h2>
-            <div className={`carousel ${fade ? "fade-in" : "fade-out"}`}>
+            <div className={`carousel fade-text ${!fade ? "change" : ""}`}>
               {messages[index]}
             </div>
             <p className="tagline">A new cinematic era begins...</p>
@@ -107,9 +99,8 @@ export default function Home() {
                   <span className="emoji">📍</span>
                   <h3>Address</h3>
                 </div>
-                <p>
-                  02 OTC Cross Road,Bengaluru Urban 29-KARNATAKA-560053 India
-                </p>
+                <p>02 OTC Cross Road,Bengaluru Urban</p>
+                <p>29-KARNATAKA-560053 India</p>
               </div>
 
               <div className="contact-card hover-animate">
