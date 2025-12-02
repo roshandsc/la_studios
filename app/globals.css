@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Layout */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+/* Rotating Quote Text (Moved Under Logo) */
+.carousel {
+  margin-top: 12px;
+  font-family: "Cinzel", serif;
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: fadeText 4s infinite;
+}
+
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+/* Logo (Reduced Size & centered) */
+.logo-wrapper img,
+.logo {
+  width: 260px;
+  height: auto;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Studio Title */
+.studio-title {
+  margin-top: 6px;
+  font-size: 2.2rem;
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+}
+
+/* Coming Soon */
+.coming-soon {
+  font-size: 1.6rem;
+  opacity: 0.9;
+  font-family: "Cinzel", serif;
+}
+
+.tagline {
+  margin-top: 4px;
+  font-size: 1rem;
+  opacity: 0.6;
+  font-family: "Cinzel", serif;
+}
+
+/* Logo */
+.logo {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Title */
+.title {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* Form */
+.form {
+  width: 100%;
+  max-width: 380px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+input,
+textarea {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px;
+  background: #b43b16;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background: #e75b25;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 15px;
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+/* Smooth Fade Animation for Message Rotation */
+.fade-in {
+  opacity: 1 !important;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0 !important;
+  transition: opacity 0.6s ease-in-out;
+}
