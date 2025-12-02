@@ -249,33 +249,42 @@ footer {
   }
 
   .carousel {
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
     text-align: center;
     line-height: 1.4;
     margin-top: 8px;
+    padding-left: 0;
+    text-align: center;
   }
 
   .studio-title {
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 6vw, 1.9rem);
     letter-spacing: 1px;
   }
 
   .coming-soon {
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+    text-align: center;
+    padding-left: 0;
+    letter-spacing: 1.5px;
   }
 
   .tagline {
-    font-size: 0.85rem;
+    font-size: clamp(0.75rem, 4vw, 1rem);
     opacity: 0.6;
+    text-align: center;
+    padding-left: 0;
+    margin-left: 0;
+    line-height: 1.4;
   }
 
   .title {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 7vw, 2rem);
     margin-top: 14px;
   }
 
   .subtitle {
-    font-size: 0.85rem;
+    font-size: clamp(0.7rem, 3.5vw, 1rem);
   }
 
   .desktop-layout {
@@ -292,10 +301,17 @@ footer {
   .right-block {
     align-items: center;
     text-align: center;
+    gap: 14px;
+    padding: 0 12px;
   }
 
   .contact-section {
     align-items: center;
+  }
+
+  .contact-card p {
+    text-align: center;
+    font-size: 0.9rem;
   }
 
   footer {
