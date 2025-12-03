@@ -243,22 +243,35 @@ footer {
     gap: 12px;
   }
 
+  html,
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0;
+  }
+
   .logo-wrapper img,
   .logo {
-    width: clamp(200px, 55vw, 260px);
+    width: clamp(240px, 65vw, 300px);
     height: auto;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    filter: brightness(1.25) contrast(1.25);
+    margin-top: 20px;
+    margin-bottom: 18px;
+    filter: brightness(1.55) contrast(1.45) saturate(1.25);
     position: relative;
-    z-index: 10;
+    z-index: 20;
+    image-rendering: -webkit-optimize-contrast;
+    object-fit: contain;
   }
 
   .logo-wrapper {
-    min-height: 240px;
+    min-height: 200px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0;
+    margin-top: 0;
   }
 
   .carousel {
