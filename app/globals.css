@@ -9,7 +9,6 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 /* Layout */
@@ -157,15 +156,6 @@ body {
   height: auto;
   animation: smoothFadeUp 1.6s ease forwards;
   margin-left: 4px;
-  position: relative;
-  z-index: 2;
-}
-
-.logo-wrapper {
-  min-height: 260px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Studio Title */
@@ -255,19 +245,8 @@ footer {
 
   .logo-wrapper img,
   .logo {
-    width: 220px;
-    height: auto;
-    margin-bottom: 14px;
-    filter: brightness(1.2) contrast(1.15);
-    position: relative;
-    z-index: 2;
-  }
-
-  .logo-wrapper {
-    min-height: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 180px;
+    margin-bottom: 10px;
   }
 
   .carousel {
