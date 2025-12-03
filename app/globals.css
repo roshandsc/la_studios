@@ -245,16 +245,17 @@ footer {
 
   .logo-wrapper img,
   .logo {
-    width: 220px;
+    width: 180px;
     height: auto;
-    margin-bottom: 14px;
-    filter: brightness(1.18) contrast(1.15);
+    margin-top: 25px;
+    margin-bottom: 16px;
+    filter: brightness(1.2) contrast(1.2);
     position: relative;
-    z-index: 3;
+    z-index: 5;
   }
 
   .logo-wrapper {
-    min-height: 210px;
+    min-height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
