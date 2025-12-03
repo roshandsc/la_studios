@@ -245,17 +245,27 @@ footer {
 
   .logo-wrapper img,
   .logo {
-    width: 180px;
-    margin-bottom: 10px;
+    width: 220px;
+    height: auto;
+    margin-bottom: 14px;
+    filter: brightness(1.18) contrast(1.15);
+    position: relative;
+    z-index: 3;
+  }
+
+  .logo-wrapper {
+    min-height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .carousel {
     font-size: clamp(0.9rem, 4vw, 1.1rem);
-    text-align: center;
+    text-align: left;
+    padding-left: 30px;
     line-height: 1.4;
-    margin-top: 8px;
-    padding-left: 0;
-    text-align: center;
+    margin-top: 6px;
   }
 
   .studio-title {
@@ -265,17 +275,16 @@ footer {
 
   .coming-soon {
     font-size: clamp(1.1rem, 5vw, 1.5rem);
-    text-align: center;
-    padding-left: 0;
+    text-align: left;
+    padding-left: 30px;
     letter-spacing: 1.5px;
   }
 
   .tagline {
-    font-size: clamp(0.75rem, 4vw, 1rem);
-    opacity: 0.6;
-    text-align: center;
-    padding-left: 0;
-    margin-left: 0;
+    font-size: clamp(0.8rem, 4vw, 1rem);
+    opacity: 0.65;
+    text-align: left;
+    padding-left: 30px;
     line-height: 1.4;
   }
 
@@ -340,4 +349,9 @@ footer {
     margin-top: 40px;
     bottom: 0;
   }
+}
+
+html,
+body {
+  scroll-behavior: smooth;
 }
