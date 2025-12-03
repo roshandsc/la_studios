@@ -239,8 +239,10 @@ footer {
 /* ---------------- Mobile Responsive Tweaks ---------------- */
 @media (max-width: 480px) {
   .container {
-    padding: 20px;
-    gap: 12px;
+    padding: 0;
+    padding-top: 8px;
+    gap: 10px;
+    justify-content: flex-start;
   }
 
   html,
@@ -254,22 +256,22 @@ footer {
 
   .logo-wrapper img,
   .logo {
-    width: clamp(240px, 65vw, 300px);
+    width: clamp(260px, 75vw, 330px);
     height: auto;
-    margin-top: 20px;
-    margin-bottom: 18px;
-    filter: brightness(1.55) contrast(1.45) saturate(1.25);
+    margin-top: 0;
+    margin-bottom: 16px;
+    filter: brightness(1.65) contrast(1.55) saturate(1.25);
     position: relative;
-    z-index: 20;
+    z-index: 50;
     image-rendering: -webkit-optimize-contrast;
     object-fit: contain;
   }
 
   .logo-wrapper {
-    min-height: 200px;
+    min-height: auto;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding-top: 0;
     margin-top: 0;
   }
