@@ -277,8 +277,8 @@ footer {
 
   .carousel {
     font-size: clamp(0.9rem, 4vw, 1.1rem);
-    text-align: left;
-    padding-left: 30px;
+    text-align: center;
+    padding-left: 0;
     line-height: 1.4;
     margin-top: 6px;
   }
@@ -286,6 +286,7 @@ footer {
   .studio-title {
     font-size: clamp(1.4rem, 6vw, 1.9rem);
     letter-spacing: 1px;
+    text-align: center;
   }
 
   .coming-soon {
@@ -302,8 +303,8 @@ footer {
   .tagline {
     font-size: clamp(0.8rem, 4vw, 1rem);
     opacity: 0.65;
-    text-align: left;
-    padding-left: 30px;
+    text-align: center;
+    padding-left: 0;
     line-height: 1.4;
   }
 
