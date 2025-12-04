@@ -260,7 +260,6 @@ footer {
     height: auto;
     margin-top: 0;
     margin-bottom: 16px;
-    filter: brightness(1.65) contrast(1.55) saturate(1.25);
     position: relative;
     z-index: 50;
     image-rendering: -webkit-optimize-contrast;
